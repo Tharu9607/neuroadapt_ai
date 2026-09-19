@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuroAdapt AI – a learning space that adapts to you</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="side">
+  <h1>🧠 NeuroAdapt <span>AI</span></h1>
+  <nav aria-label="Sections">
+    <a href="#dash">Dashboard</a><a href="#twin">🧬 My twin</a><a href="#learn">📚 Learning</a><a href="#access">♿ Accessibility</a><a href="#time">📊 Timeline</a>
+  </nav>
+  <button id="reset" class="ghost">⚙ Reset demo</button>
+</aside>
+
+<main>
+<section id="dash">
+  <h2>Your adaptive learning environment</h2>
+  <p class="mut">Answer questions below. The engine watches accuracy, speed and errors, then changes the lesson to fit you.</p>
+  <div class="stats">
+    <div class="card stat"><b id="s-acc">—</b><span>Accuracy</span></div>
+    <div class="card stat"><b id="s-time">—</b><span>Avg response time</span></div>
+    <div class="card stat"><b id="s-focus">80%</b><span>Focus</span></div>
+    <div class="card stat"><b id="s-level">Level 2</b><span>Difficulty</span></div>
+  </div>
+  <div class="card">
+    <h3><span class="dot"></span> Adaptive engine: <span id="eng">Active</span></h3>
+    <ul id="chk" class="chk"><li>✓ Difficulty analysed</li><li>✓ Cognitive load estimated</li><li>✓ Accessibility profile updated</li><li>✓ Learning path optimised</li></ul>
+  </div>
+</section>
+
+<section id="twin" class="card">
+  <h3>🧬 Learner digital twin</h3>
+  <div class="grid">
+    <div><div class="ring" id="ring"><div><span><b id="score">50%</b>learning score</span></div></div><p id="state" class="c"></p></div>
+    <div id="twinbars"></div>
+  </div>
+  <p class="note"><b>AI interpretation:</b> <span id="interp"></span></p>
+</section>
+
+<section id="learn" class="grid">
+  <div class="card">
+    <div class="tags"><span class="tag">Level: <b id="lvl"></b></span><span class="tag">Format: <b id="mode"></b></span><span class="tag" id="stp" hidden>Step-by-step on</span></div>
+    <p id="instr" class="mut"></p>
+    <h3 id="qtext" class="q"></h3>
+    <div id="vis" class="vis" hidden></div>
+    <div id="opts" class="opts"></div>
+    <p id="fb" role="status"></p>
+    <div class="row"><button id="next" class="btn" hidden>Next question</button><button id="say" class="ghost">🔊 Read aloud</button></div>
+  </div>
+  <div class="card">
+    <h3>🤖 Adaptive intelligence engine</h3>
+    <b>Events detected</b><ul id="evt"></ul>
+    <b>AI decision</b><ul id="dec"></ul>
+    <div class="row"><button id="apply" class="btn" hidden>Apply adaptation</button><button id="why" class="ghost">🔍 Explain my adaptation</button></div>
+    <div id="exp" class="note" hidden></div>
+  </div>
+</section>
+
+<section id="access" class="card">
+  <h3>♿ Accessibility intelligence</h3>
+  <div class="grid">
+    <div id="axbars"></div>
+    <div class="axs">
+      <b>Adaptations</b>
+      <label><input type="checkbox" id="ax-font"> Larger text</label>
+      <label><input type="checkbox" id="ax-motion"> Reduce animations</label>
+      <label><input type="checkbox" id="ax-simple"> Simplify instructions</label>
+      <label><input type="checkbox" id="ax-tts"> Read questions aloud</label>
+      <p id="axnote" class="note"></p>
+    </div>
+  </div>
+</section>
+
+<section id="time" class="card">
+  <h3>📊 Live adaptation timeline</h3>
+  <ol id="tl" class="tl"></ol>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
